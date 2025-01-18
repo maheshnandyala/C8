@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Users, Megaphone, Sparkles } from 'lucide-react'
 import { Button } from "@/components/ui/button"
-
+import Image from "next/image"
 const services = [
   {
     title: "Talent Management",

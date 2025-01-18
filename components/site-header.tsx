@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -24,7 +25,14 @@ export function SiteHeader() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-transparent'}`}>
       <div className="container flex h-16 items-center justify-between">
-        <span className="text-xl font-bold">COLLBR8.</span>
+        <div className="relative w-12 h-12">
+          <Image
+            src={isScrolled ? "/Logo white_.png" : "/Logo Black_.png"}
+            alt="Collbr8 Logo"
+            fill
+            className="object-contain"
+          />
+        </div>
         <nav className="hidden md:flex items-center space-x-6 text-sm">
           <Button 
             variant="link" 

@@ -6,9 +6,14 @@ export function HeroSection() {
     <section className="relative min-h-screen bg-[#FFE566] pt-16 flex justify-center items-center">
       <div className="container grid lg:grid-cols-2 gap-8 items-center py-20">
         <div className="space-y-6">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight">
-            Collbr8
-          </h1>
+            <Image
+            src="/IMG_9319.PNG"
+            alt="Collbr8"
+            width={600}
+            height={400}
+            className="object-cover"
+            priority
+            />
           <p className="text-2xl md:text-3xl lg:text-4xl">
             Bridging Brands and Influencers!
           </p>

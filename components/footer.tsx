@@ -1,5 +1,7 @@
 import Link from "next/link"
-import { Instagram, Twitter, LinkedinIcon as LinkedIn } from 'lucide-react'
+import { Instagram, LinkedinIcon as LinkedIn } from 'lucide-react'
+import { XLogo } from "./x-logo"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -7,7 +9,14 @@ export function Footer() {
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-xl font-bold">COLLABR8.</h3>
+            <div className="relative w-12 h-12">
+              <Image
+                src="/Logo white_.png"
+                alt="Collbr8 Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
             <p className="text-gray-400">
               Creating authentic connections between brands and diverse creators.
             </p>
@@ -32,15 +41,33 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <Link href="#" className="hover:text-gray-300">
-                <Instagram className="h-6 w-6" />
-              </Link>
-              <Link href="#" className="hover:text-gray-300">
-                <Twitter className="h-6 w-6" />
-              </Link>
-              <Link href="#" className="hover:text-gray-300">
-                <LinkedIn className="h-6 w-6" />
-              </Link>
+                <Link
+                  href="https://www.instagram.com/collabr8agency/"
+                  className="hover:text-gray-300"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram className="h-6 w-6" />
+                </Link>
+                <Link
+                  href="https://x.com/collabr8agency"
+                  className="hover:text-gray-300"
+                  aria-label="X"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <XLogo />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/collabr8agency"
+                  className="hover:text-gray-300"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedIn className="h-6 w-6" />
+                </Link>
             </div>
           </div>
         </div>
@@ -51,4 +78,3 @@ export function Footer() {
     </footer>
   )
 }
-
